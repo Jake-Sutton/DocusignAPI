@@ -5,14 +5,14 @@ For Starting on OSX/Linux:
 
 ~~~~
 cd DocuSign
-DEBUG=myapp:* npm start
+nodemon
 ~~~~
 
 For starting on windows:
 
 ~~~~
 cd DocuSign
-set DEBUG=myapp:* & npm start
+nodemon
 ~~~~
 
 
