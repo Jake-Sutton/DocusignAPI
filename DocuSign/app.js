@@ -10,6 +10,17 @@ var users = require('./routes/users');
 
 var app = express();
 
+// create mongo client outlet
+// Retrieve
+var MongoClient = require('mongodb').MongoClient;
+
+// Connect to the db
+MongoClient.connect("mongodb://localhost:27017/exampleDb", function(err, db) {
+  if(!err) {
+    console.log("We are connected");
+  }
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
