@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1.
+    Event List
+  ul
+    each event, i in eventlist
+      li
+        p= event.name
+
+block scripts
+        script(src='/vendor/jquery-2.2.3.min.js')
+        script(src='/vendor/jquery.form.min.js')
+        script(src='/vendor/bootstrap.min.js')
