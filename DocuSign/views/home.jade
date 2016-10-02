@@ -1,14 +1,11 @@
 extends layout
 
 block content
-  h1.
-    Event List
-  button(type='button', onclick="window.open('/create');") Create New Event
-  ul
+  div.form  
     each event, i in eventlist
-      li
+      div.event
         a(href='/events/' + event.name)=event.name
-
+    button.button(type='button', onclick="window.open('/create');", style="margin-top:15px") Create New Event
 block scripts
         script(src='/vendor/jquery-2.2.3.min.js')
         script(src='/vendor/jquery.form.min.js')

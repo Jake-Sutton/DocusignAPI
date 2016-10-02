@@ -1,11 +1,80 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#logo {
+  padding-top: 100px
 }
 
-a {
-  color: #00B7FF;
+.event {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-color: #700;
+  border-width: 1px 1px 1px 1px;
+  border-style: none; 
+  font-size:35px;
+  text-align: left;
+  padding-left: 10px;
+  background: rgba(205, 185, 156, 0.44);
+  border-radius: 10px;
+   
+  
 }
-ul {
-  list-style-type: none;
+
+.event a {
+  color: #330000;
+  text-decoration: none;
+}
+
+.form {
+  max-width: 500px;
+  max-height:600px;
+  padding: 30px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.form input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.button {
+  outline: 0;
+  background: #CC0000;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #EF3B3A;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+
+body {
+  text-align: center;
 }
