@@ -17,4 +17,15 @@ router.post('/home', function(req, res, next) {
   });
 });
 
+router.get('/events/:name', function (req, res, next) {
+    var db = req.db;
+    var collection = db.get('Events');
+    collection.find({name: req.params.name}, {}, function (e, docs) {
+        res.render('event', {
+            event: docs
+        });
+    });
+
+});
+
 module.exports = router;
