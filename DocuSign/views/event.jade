@@ -1,13 +1,16 @@
 extends layout
 
 block content
-  h1.
-    Event List
+  h1 SD Hacks
   ul
-    each event, i in eventlist
-      li
-        a(href='/events/' + event.name)=event.name
-
+    li
+      p='Name: ' + event[0].name
+      p='Message: ' + event[0].message
+  h2 Participants
+  ul
+     each people in event[0].people
+       li
+         p=people
 block scripts
         script(src='/vendor/jquery-2.2.3.min.js')
         script(src='/vendor/jquery.form.min.js')
