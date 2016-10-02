@@ -7,6 +7,11 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET home page. */
+router.get('/create', function(req, res, next) {
+  res.render('create', { title: 'TDocs - Create Event' });
+});
+
+/* GET home page. */
 router.post('/home', function(req, res, next) {
   var db = req.db;
   var collection = db.get('Events');
@@ -14,6 +19,31 @@ router.post('/home', function(req, res, next) {
     res.render('home', {
       eventlist : docs
     });
+  });
+});
+
+/* GET home page. */
+router.post('/addevent', function(req, res, next) {
+  var db = req.db;
+
+
+  var eventName = req.body.event;
+  console.log(eventName);
+  var eventMessage = req.body.message;
+
+  var collection = db.get('Events');
+
+  collection.insert({
+    "name" : eventName,
+    "message" : eventMessage
+  }, function(err, doc) {
+   
+    if (err) {
+      res.send("There was a problem adding the information to the database.");
+    } else {
+      res.redirect(307, "home");
+    }
+    // nope
   });
 });
 

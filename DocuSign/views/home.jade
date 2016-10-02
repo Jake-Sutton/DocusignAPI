@@ -3,6 +3,7 @@ extends layout
 block content
   h1.
     Event List
+  button(type='button', onclick="window.open('/create');") Create New Event
   ul
     each event, i in eventlist
       li
